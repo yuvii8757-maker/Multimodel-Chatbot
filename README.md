@@ -1,4 +1,4 @@
-# 🌟 SoulSync: Multimodal AI Chatbot & Creative Studio
+ 🌟 SoulSync: Multimodal AI Chatbot & Creative Studio
 
 SoulSync is a full-stack, beginner-friendly personal AI assistant that supports **multimodal perception (text, vision, audio/voice)**, **interactive voice assistant mode with continuous conversational loop**, **generative AI image and video studio**, **multilingual understanding in 50+ languages**, **grounded Retrieval-Augmented Generation (RAG) using PostgreSQL and `pgvector`**, **live web search with verified citations**, **interactive document creation and diff editing**, and an **emotionally supportive companion persona equipped with crisis safeguards**.
 
@@ -284,5 +284,6 @@ Sample documents are included in the `sample_data/` directory:
 - **API Secrets**: All API keys remain strictly in `backend/.env` and are never exposed to the frontend.
 - **Anonymous Sessions**: Sessions are completely isolated via `X-Session-ID`. Distinct browser instances cannot query or view other users' conversations or uploaded documents.
 - **Safety Guardrails**: Prompt injection defenses and crisis keyword detection guarantee that sensitive crises are answered with immediate human helpline resources.
-#   M u l t i m o d e l - C h a t b o t  
+#   M u l t i m o d e l - C h a t b o t 
+ 
  
