@@ -1,8 +1,9 @@
- 🌟 SoulSync: Multimodal AI Chatbot & Creative Studio
+# 🌟 SoulSync: Multimodal AI Chatbot & Creative Studio
 
 SoulSync is a full-stack, beginner-friendly personal AI assistant that supports **multimodal perception (text, vision, audio/voice)**, **interactive voice assistant mode with continuous conversational loop**, **generative AI image and video studio**, **multilingual understanding in 50+ languages**, **grounded Retrieval-Augmented Generation (RAG) using PostgreSQL and `pgvector`**, **live web search with verified citations**, **interactive document creation and diff editing**, and an **emotionally supportive companion persona equipped with crisis safeguards**.
 
 ---
+
 
 ## 🚀 Key Features
 
@@ -10,44 +11,55 @@ SoulSync is a full-stack, beginner-friendly personal AI assistant that supports 
 - **Continuous Voice AI**: Futuristic glowing holographic orb with real-time audio visualizer. Features hands-free continuous conversation (listening -> thinking -> speaking -> auto-listen).
 - **Multilingual Speech Recognition & Synthesis**: Whisper STT and natural TTS supporting 50+ global languages with browser speech fallbacks.
 - **Vision Understanding**: Upload images (`PNG`, `JPEG`, `WEBP`) and ask questions about diagrams, charts, or scenes.
+- 
 
 ### 2. AI Media Studio (Image & Video Generation)
 - **AI Image Generator**: Generate 8K photorealistic, cinematic, anime, or 3D images powered by DALL-E 3 and Pollinations Flux. Includes aspect ratio control (1:1, 16:9, 9:16) and direct chat insertion.
 - **AI Video Generator**: Generate cinematic motion sequences and animations with embedded HTML5 video playback, loop controls, and MP4 downloads.
 - **Smart Media Intent Detection**: Naturally ask *"Generate an image of a cybernetic tiger"* or *"Create a video of ocean waves"* directly in the chat to generate media inline!
+- 
 
 ### 3. Deep Multilingual Understanding (50+ Languages)
 - Native conversational fluency across English, Spanish, French, German, Italian, Portuguese, Russian, Mandarin Chinese, Japanese, Korean, Arabic, Hindi, Bengali, Tamil, Telugu, Marathi, Turkish, Vietnamese, Dutch, and more.
 - Automatic language detection with culturally accurate tone, idioms, and nuances.
 - Multi-language Document Studio translations covering 20+ world languages.
+- 
 
 ### 2. Grounded RAG Knowledge Base
 - Ingest documents in **PDF, DOCX, TXT, and Markdown** format.
 - Automatic text extraction, recursive chunking with configurable overlap, and dense vector embeddings.
 - Stored and indexed in **PostgreSQL with `pgvector`** using cosine distance operators (`<=>`).
 - Grounded answers strictly cite document filenames and chunk indexes.
+- 
 
 ### 3. Live Web Search with Clickable Citations
 - Integrated web search (Tavily API with automatic DuckDuckGo fallback when no API key is set).
 - Synthesizes live search snippets into clear answers while clearly separating sourced facts from model commentary.
 - Displays clickable source badges with external links.
+- 
 
 ### 4. Interactive Document Studio (Diff, Edit & Download)
 - **Draft from Prompt**: Generate comprehensive documents from prompts.
 - **Document Editing Actions**: One-click actions to *Summarize*, *Fix Grammar & Tone*, *Rewrite*, or *Translate* into multiple languages.
 - **Visual Diff Viewer**: Side-by-side or unified view highlighting inserted text in green and deleted text in red, preserving unedited text.
 - **Multi-Format Export**: Download revised documents directly as **DOCX**, **PDF**, **Markdown**, or **TXT**.
+- 
+
 
 ### 5. Emotionally Supportive Persona & Crisis Safeguards
 - Empathetic conversational tone that validates emotions before offering practical, manageable coping steps.
 - Prohibits clinical diagnoses or claiming to be a therapist.
 - **Crisis & Self-Harm Detection**: Immediate trigger of emergency support hotlines (988 Suicide & Crisis Lifeline, Crisis Text Line 741741, findahelpline.com) rather than casual conversation.
+- 
+
 
 ### 6. Anonymous Session Isolation
 - No user authentication or complex registration required.
 - Client generates an anonymous session identifier (`X-Session-ID`), and database queries strictly partition all conversations, messages, and vector embeddings by session.
 
 ---
+
+
 
 ## 🏗️ Architecture Overview
 
@@ -92,6 +104,7 @@ flowchart TD
 ```
 
 ---
+
 
 ## 📦 Directory Structure
 
@@ -139,6 +152,7 @@ mlchatbot/
 
 ---
 
+
 ## 🛠️ Step-by-Step Installation & Setup
 
 ### Prerequisites
@@ -147,6 +161,7 @@ mlchatbot/
 - **Docker** *(Optional, for PostgreSQL + pgvector)*
 
 ---
+
 
 ### Step 1: PostgreSQL with pgvector (Optional for Production)
 
@@ -162,9 +177,11 @@ docker run -d \
   pgvector/pgvector:pg16
 ```
 
+
 > **Note for Local Beginners:** The project is pre-configured with an **out-of-the-box SQLite fallback** (`sqlite+aiosqlite:///./multimodal_chat.db`). You can run the entire backend immediately without installing Docker or PostgreSQL! When you are ready for PostgreSQL, simply set `DATABASE_URL=postgresql+asyncpg://postgres:postgres@localhost:5432/multimodal_chat` in `backend/.env`.
 
 ---
+
 
 ### Step 2: Backend Setup
 
